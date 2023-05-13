@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Buying and Selling Form</title>
+  
+ <style>
+  /* label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  .error {
+    color: #ff0000;
+    font-size: 12px;
+  } */
+  /* General styles */
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-size: 36px;
+      color: grey;
+    }
+    
+    form {
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-size: 16px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 16px;
+      background-color: #f1f1f1;
+      transition: box-shadow 0.3s ease;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0px 0px 5px #007bff;
+    }
+    
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #0062cc;
+    }
+    
+    .error {
+      color: #ff0000;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    
+    /* Additional styles for form validation */
+    
+    input:invalid,
+    select:invalid,
+    textarea:invalid {
+      box-shadow: none;
+    }
+    
+    input:valid,
+    select:valid,
+    textarea:valid {
+      box-shadow: 0px 0px 5px #00cc00;
+    }
+    
+    input:invalid:focus,
+    select:invalid:focus,
+    textarea:invalid:focus {
+      box-shadow: 0px 0px 5px #ff0000;
+    }
+    
+    /* Additional styles for form success message */
+    
+    .success-message {
+      background-color: #00cc00;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+    
+    .success-message.show {
+      display: block;
+    }
+    
+    /* Additional styles for form error message */
+    
+    .error-message {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+    
+    .error-message.show {
+      display: block;
+    }
+    nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #f8f8f8;
+            height: 50px;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+          }
+          nav h1 {
+            margin: 0;
+            font-size: 24px;
+          }
+          nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+          }
+          nav li {
+            margin-left: 20px;
+            color:green;
+          }
+          nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+          }
+          nav a:hover {
+            color: #555;
+          }
+          .title {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 100px;
+          }
+          nav {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              position: fixed;
+              top: 0;
+              right: 0;
+              background-color: grey;
+              height: 50px;
+              width: 100%;
+              padding: 0 20px;
+              box-sizing: border-box;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              z-index: 1;
+            }
+            nav h1 {
+              margin: 0;
+              font-size: 24px;
+            }
+            nav ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+            }
+            nav li {
+              margin-left: 20px;
+            }
+            nav a {
+              text-decoration: none;
+              color: #333;
+              font-weight: bold;
+            }
+            nav a:hover {
+              color: #555;
+            }
+            .title {
+              text-align: center;
+              font-size: 36px;
+              margin-top: 100px;
+            }
+            #a1,#a2{
+              color:blue;
+            }
+    
+ </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a id="a1" href="/chart">Statistics</a></li>
+      <li><a id="a2" href="/faq">FAQs</a></li>
+      <li><a id="a2" href="/car_data">Car Data</a></li>
+      <li><a id="a2" href="/feedback">Feedback</a></li>
+      
+    </ul>
+  </nav>
+  
+  
+
+  <h1>Car Buying and Selling Form</h1>
+  <form name="myForm"  method="POST" action="/Submit">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <div class="error" id="name-error"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <div class="error" id="email-error"></div>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" required>
+    <div class="error" id="phone-error"></div>
+
+    <label for="Manufacturer">Manufacturer:</label>
+    <input type="text" id="Manufacturer" name="Manufacturer" required>
+    <div class="error" id="car-make-error"></div>
+
+    <label for="model">Car Model:</label>
+    <input type="text" id="model" name="model" required>
+    <div class="error" id="car-model-error"></div>
+
+    <label for="car-year">Car Year:</label>
+    <input type="text" id="year" name="year" required>
+    <div class="error" id="car-year-error"></div>
+
+    <label for="price">Car Price:</label>
+    <input type="text" id="price" name="price" required>
+    <div class="error" id="car-price-error"></div>
+
+    <label for="fuel">Fuel:</label>
+    <select id="fuel" name="fuel" required>
+      <option value="">-- Please select --</option>
+      <option value="Petrol">Petrol</option>
+      <option value="CNG">CNG</option>
+      <option value="Diesel">Diesel</option>
+      <option value="Electric">Electric</option>
+      <option value="Petrol+CNG">Petrol+CNG</option>
+    </select>
+    <div class="error" id="car-make-error"></div>
+
+    <label for="Mileage">Mileage:</label>
+    <textarea id="Mileage" name="Mileage" required></textarea>
+    <div class="error" id="car-description-error"></div>
+
+    
+
+    <input type="submit" value="Submit">
+  </form>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

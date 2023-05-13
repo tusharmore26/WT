@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" type="text/css" href="static\css\style.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/slider.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/about.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/price.css"/>
+    <link rel="stylesheet" type="text/css" href="static\css\footer.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/nav_home.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/model.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- <title>{% block title %} {% endblock %}</title> -->
+    
+</head>
+<body>
+    <!-- NavBar -->
+    <header>
+        <div class="nav container">
+            <i class='bx bx-menu' id="menu-icon" onclick="select_menu()"></i>
+            <a href="#" class="logo">Car<span>Point</span></a>            
+                <ul class="navbar">
+                    <li><a class="active" href="#home">Home</a></li>
+                    <!-- <li><a href="#price">Price</a></li> -->
+                    <li><a href="#model">Buy/Sell</a></li>
+                    <li><a href="#stat">Statitics</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+        </div>
+    </header>
+
+    <!-- {% block body %}
+    {% endblock %} -->
+
+    <section class="home " id="home">
+        <div class="home-text">
+            <h1>We Have Everything <br> Your <span>Car</span>Need</h1>
+            <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Expedita eligendi </p>
+            <!-- Home Button -->
+            <a href="/discover" class="btn">Discover Now</a>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L48,208C96,192,192,160,288,128C384,96,480,64,576,74.7C672,85,768,139,864,149.3C960,160,1056,128,1152,96C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+    </section>
+    
+   
+    
+    <!-- Model Section -->
+    <section class="model" id="model">
+        <div class="model-heading">        
+            <h2>Buying And Selling</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="model-container">
+        
+            <!-- model 1 -->
+            <div class="box">
+                <div class="icon">01</div>
+                <div class="content">
+                    <h3>Buying Section</h3>
+                    <p>Lorem, ipsum dolor sit amet
+                         consectetur adipisicing elit.
+                          Reiciendis impedit architecto numquam
+                           quae error dicta dolorem. Exercitationem 
+                    </p>
+                    <a href="templates\sell.html">Buy A Car</a>
+                </div>
+            </div>
+        
+            <!--model 2 -->
+            <div class="box">
+                <div class="icon">02</div>
+                <div class="content">
+                    <h3>Selling Section</h3>
+                    <p>Lorem, ipsum dolor sit amet
+                         consectetur adipisicing elit.
+                          Reiciendis impedit architecto numquam
+                           quae error dicta dolorem. Exercitationem 
+                    </p>
+                    <a href="templates\sell.html">Sell My Car</a>
+                </div>
+            </div>
+        
+            
+        </section>
+    
+       <!-- Visualization section  -->
+    <section class="stat" id="stat">
+        <div class="stat-heading"> 
+            <h4>Statitics</h4>       
+            <h2>Data Visualization</h2>
+            <p> </p>
+        </div>
+        <div class="img-slider">
+            <div class="slide active">
+                <img src="../static/slider1.jpg">
+                <div class="info">
+                    <h1>Fuel Type Distribution</h1>
+                    <p style="color: white;">Here You can see PieChart of the percentagewise Fuel Distribution. To see the PieChart click the below button:</p>
+                    <a href="static/fuel_pie_chart.png">Discover More</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../static/slider1.jpg">
+                <div class="info">
+                    <h1>Manufacturer Type Distribution</h1>
+                    <p style="color: white;">Here You can see PieChart of the percentagewise Distribution of Manufacturer Company. To see the PieChart click the below button:</p>
+                    <a href="static/manufacturer_pie_chart.png">Discover More</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../static/slider1.jpg">
+                <div class="info">
+                    <h1>Year Type Distribution</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi incidunt quibusdam reiciendis dolor iure corporis fuga vel odit delectus, molestias cupiditate consectetu</p>
+                    <a href="static\year_pie_chart.png">Discover More</a>
+                </div>
+            </div>
+          
+           
+            <div class="navigation">
+                <div class="btn btn1 active"></div>
+                <div class="btn btn2"></div>
+                <div class="btn btn3"></div>
+                <div class="btn btn4"></div>
+                <div class="btn btn5"></div>
+            </div>
+        </div>
+      
+    
+    </section>
+    
+    
+     <!-- About Sectiction -->
+    <section class="about" id="about">
+    <div class="about-container">
+        <div class="content-section">
+            <div class="title">
+                <h1>About Us</h1>
+            </div>
+            <div class="content">
+                <h3>Lorem ipsum dolor sit amet, consectetur  elit. </h3>
+                <p> Maiores expedita vel sunt deleniti cupiditate nam, accusamus odit eius veritatis, aliquam animi facilis, natus omnis in et fugiat incidunt mollitia sequi?
+                </p> 
+                
+                 <a href="/aboutUs">Read More</a>
+               
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="team-container">
+        <div class="card">
+         <div class="content">
+             <div class="imgBx"><img src="../static/css/image2.jpg"></div>
+             <div class="contentBx">
+                 <h3>Tushar More <br><span>FullStack Developer</span></h3>
+             </div>
+         </div>
+         <ul class="sci">
+             <li style="--i:1">
+                 <a href="https://github.com/tusharmore26"><i class='bx bxl-github' aria-hidden="true"></i></a>
+             </li>
+             <li style="--i:2">
+                 <a href="https://www.linkedin.com/in/tushar-more-0b298524a/"><i class='bx bxl-linkedin-square' aria-hidden="true"></i></a>
+             </li>
+             <li style="--i:3">
+                 <a href="https://www.instagram.com/tushar._here/"><i class='bx bxl-instagram' aria-hidden="true"></i></a>
+             </li>
+         
+            </ul>  
+        </div>   
+     
+     
+       
+    </section>
+    
+    
+    
+   
+<section class="footer">
+    
+    <div class="footer-container container">
+        <div class="footer-box">
+            <a href="#" class="logo">Car<span>Point</span></a>
+            <div class="social">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-youtube"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Page</h3>
+            <a href="#home">Home</a>
+            <!-- <a href="/#price">Price</a> -->
+            <a href="#model">Buy/Sell</a>
+            <a href="#stat">Statitics</a>
+        </div>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <div class="phone">
+                <i class="bx bxs-phone"></i>
+                <p>7721066904</p>
+            </div>
+            <div class="email">
+                <i class="bx bxl-gmail"></i>
+                <p>tusharmore938@gmail.com</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<div class="copyright">
+    <p>&#169 CarPoint All Right Reserverd</p>
+</div>
+</body>
+<script>
+    let menu = document.querySelector(' .navbar');
+    console.log(menu);
+   document.querySelector("#menu-icon").onclick = () =>{
+    menu.classList.toggle('active')
+   }
+
+   window.onscroll = () =>{
+    menu.classList.remove('active');
+    
+   }
+ </script>
+
+<script>
+    // navbar 
+    
+    
+         var slide=document.querySelectorAll('.slide');     
+        var btns=document.querySelectorAll('.btn');
+        let currentSlide=1;
+        let idx=1;
+        var manualNav = function(manual){
+            slide.forEach((slides) => {
+              
+              slides.classList.remove('active');
+              btns.forEach((btn) => {
+                btn.classList.remove('active');
+              });
+            });
+    
+            slide[manual].classList.add('active');
+            btns[manual+1].classList.add('active');
+        }
+        btns.forEach((btn,i)=>{
+           btn.addEventListener("click",()=>{
+            
+            manualNav(i-1);
+            idx=i;
+            currentSlide=i-1;
+            
+           })
+        });
+    
+    
+        // autoplay
+        var repeat=function(activeClass){
+            let active=document.getElementsByClassName('active');
+            
+           
+            var repeater = () =>{
+                setTimeout(function(){
+                    if(slide.length == idx)
+                    {idx=0;}
+                    if(idx >=slide.length)
+                    {return;}
+                    [...active].forEach((activeSlice)=>{
+                        
+                    activeSlice.classList.remove('active');
+                    btns.forEach((btn) => {
+                btn.classList.remove('active');
+                    });
+                    });
+    
+                    slide[idx].classList.add('active');
+                    
+                    btns[idx+1].classList.add('active');
+                    idx++;
+    
+                    
+                    repeater();
+                },10000);
+               }
+               repeater();
+        }
+       repeat();
+    // Price color change
+     function change(a,img,tit,link,cont)
+     {
+        if(a==1)
+        {document.getElementById(img).style.display='none'
+        document.getElementById(tit).style.display='none'
+        document.getElementById(link).style.display='inline'
+        document.getElementById(cont).style.height='350px'
+       }
+       else
+       {
+        document.getElementById(img).style.display='inline'
+        document.getElementById(tit).style.display='inline'
+        document.getElementById(link).style.display='none'
+        document.getElementById(cont).style.height='auto'
+       }  
+     }
+    
+    //  header dynamic color change
+     let header =document.querySelector('header');
+        window.addEventListener('scroll',()=>{
+            // header.classList.toggle('logo_bg_0',window.scrollY > 525);
+            // header.classList.toggle('logo_bg_1',window.scrollY > 1270);
+            header.classList.toggle('shadow0',window.scrollY > 0);
+            // header.classList.toggle('link_color_0',window.scrollY > 140);
+            // header.classList.toggle('link_color_1',window.scrollY > 820);
+        });
+    
+    
+    // slider script
+    </script>
+    
+<!-- {% block script %}
+{% endblock %} -->
+
+</html>

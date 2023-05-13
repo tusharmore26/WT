@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cars Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+        }
+        <style>
+            #go{
+              text-decoration: none;
+            }
+            #button1{
+              position: fixed; bottom: 0; left: 0;
+              margin-left:15px;
+              margin-bottom:15px;
+              background-color:grey,
+              color:white
+            }
+          </style>
+    </style>
+</head>
+<body>
+    <button id="button1"><a href="\" id="go">Go Back</a></button>
+    <table class="car-table">
+        <thead>
+            <tr class="header-row">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Fuel Type</th>
+                <th>Mileage</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr class="data-row">
+                {% for col in row %}
+                <td>{{ col }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>

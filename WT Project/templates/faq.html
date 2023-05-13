@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot Example</title>
+    <link rel="stylesheet" href="../static/faq.css" type="text/css">
+	<style>
+		body{
+			background-color:lightblue;
+		}
+		p{
+			color:red;
+		}
+		h1{
+			color:red;
+		}
+		#p2{
+			color:green;
+		}
+		#opt1{
+			text-align:center;
+			width:25%;
+			height:15;
+		}
+		option{
+			color:black;
+		}
+		#go{
+			text-decoration: none;
+		}
+		#button1{
+			position: fixed; bottom: 0; left: 0;
+			margin-left:15px;
+			margin-bottom:15px;
+			background-color:grey,
+			color:white
+		}
+
+		
+	</style>
+</head>
+<body>
+	<button id="button1"><a href="\" id="go">Go Back</a></button>
+	<h1>FAQs</h1>
+	<form method="POST">
+		<label for="message">Ask a question:</label><br>
+		<select id='message' name='message' >
+			<option id="opt1">---Select---</option>
+			<option value="What is the business model of carpoint?">What is the business model of carpoint?</option>
+			<option value="How do I book an appointment?">How do I book an appointment?</option>
+			<option value="what is your name?">what is your name?</option>
+			<option value="how are you?">how are you?</option>
+			<option value="what is the time now?">what is the time now?</option>
+			<option value="Is there an accident history?">Is there an accident history?</option>
+			
+		</select>
+		<input type="submit" value="Submit">
+	</form>
+	{% if message %}
+	<p>You: {{ message }}</p>
+	{% endif %}
+	{% if response %}
+	<p id="p2">Bot: {{ response }}</p>
+	{% endif %}
+</body>
+</html>

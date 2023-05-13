@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pie Charts</title>
+    <style>
+      #go{
+        text-decoration: none;
+      }
+      #button1{
+        position: fixed; bottom: 0; left: 0;
+        margin-left:15px;
+        margin-bottom:15px;
+        background-color:grey,
+        color:white
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button1"><a href="\" id="go">Go Back</a></button>
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        <h1>Fuel Type Distribution</h1>
+        <img src="{{ fuel_image_file }}" alt="Fuel Type Pie Chart">
+      </div>
+      <div>
+        <h1>Manufacturer Distribution</h1>
+        <img src="{{ manufacturer_image_file }}" alt="Manufacturer Pie Chart">
+      </div>
+      <div>
+        <h1>Year Distribution</h1>
+        <img src="{{ year_image_file }}" alt="Year Distribution" width="500" height="500">
+      </div>
+    </div>
+  </body>
+</html>
